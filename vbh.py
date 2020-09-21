@@ -27,7 +27,7 @@ if mode.lower() == 'monitor':
         try:
             tcp.bind(orig)
         except:
-            exit(f'{host} is not an IP address from your machine! You can check all your IP adresses using: ip a')
+            exit(f'Could not open a new socket using {host}:{port}. Check if the IP is correct and/or the port is not being used.')
         tcp.listen(1)
         while True:
             con, client = tcp.accept()
@@ -40,7 +40,7 @@ if mode.lower() == 'monitor':
         try:
             udp.bind(orig)
         except:
-            exit(f'{host} is not an IP address from your machine! You can check all your IP adresses using: ip a')
+            exit(f'Could not open a new socket using {host}:{port}. Check if the IP is correct and/or the port is not being used.')
         while True:
             con, client = udp.recvfrom(1024)
             with open(logfile, 'a') as arquivo:
@@ -54,7 +54,7 @@ elif mode.lower() == 'aggressive':
         try:
             tcp.bind(orig)
         except:
-            exit(f'{host} is not an IP address from your machine! You can check all your IP addresses using: ip a')
+            exit(f'Could not open a new socket using {host}:{port}. Check if the IP is correct and/or the port is not being used.')
         tcp.listen(1)
         while True:
             con, client = tcp.accept()
@@ -73,7 +73,7 @@ elif mode.lower() == 'aggressive':
         try:
             udp.bind(orig)
         except:
-            exit(f'{host} is not an IP address from your machine! You can check all your IP adresses using: ip a')
+            exit(f'Could not open a new socket using {host}:{port}. Check if the IP is correct and/or the port is not being used.')
         while True:
             con, client = udp.recvfrom(1024)
             with open(logfile, 'a') as arquivo:
