@@ -12,7 +12,7 @@ If receive at least 1 packet, it will log into a file (Monitor Mode) or log into
 
 ## Configuring
 All your configurations should be set up on file config_vbh.py <br>
-Keep both files (vbh.py and config_vbh.py) in the same directory to work properly. <br>
+Keep both files (vbh.py and config_vbh.py) in the same directory to work property. <br>
 
 ## Running
 $ sudo python3 vbh.py &<br>
