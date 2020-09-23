@@ -24,7 +24,7 @@ proto = 'tcp'
 # monitor = Just monitor the scans and log into a file (/var/log/vbh.log)
 # aggressive = Monitor mode + add firewall rules to your iptables (Chain INPUT)
 # Default: mode = 'monitor'
-mode = 'aggressive'
+mode = 'monitor'
 ## logfile
 # File to log all entries
 # Default: /var/log/vbh.log
