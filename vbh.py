@@ -84,5 +84,7 @@ elif mode.lower() == 'aggressive':
                     arquivo.write(f'{datetime.now()} - Firewall rule added to chain INPUT to IP {client[0]}.\n')
                 else:
                     arquivo.write(f'{datetime.now()} - {client[0]} already added to chain INPUT and still receiving packets on socket. Check your firewall!\n')
-
+else
+    exit('Invalid mode! Chose between MONITOR or AGGRESSIVE.')
+    
 
